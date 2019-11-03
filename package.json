@@ -1,0 +1,12 @@
+{
+  "name": "check-npm-client",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "may",
+  "license": "MIT",
+  "scripts": {
+    "preinstall": "node check.js",
+    "check": "node check.js",
+    "start": "node start.js"
+  }
+}
