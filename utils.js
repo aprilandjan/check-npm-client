@@ -30,10 +30,16 @@ function getCurrentProcessInfo () {
 }
 
 // https://stackoverflow.com/questions/7486717/finding-parent-process-id-on-windows
+// https://superuser.com/questions/415360/how-do-i-find-out-command-line-arguments-of-a-running-program
 function getParentPidByPid(pid) {
-  const stdout = execSync(`wmic process get processid,parentprocessid,executablepath|find "${pid}"`);
-  // console.log(stdout.toString());
-  return stdout.toString();
+  // const stdout = execSync(`wmic process get processid,parentprocessid,executablepath|find "${pid}"`);
+  const stdout = execSync(`wmic process get processid,parentprocessid,executablepath|find "${pid}"`).toString().trim();
+  const [execPath, processId] = stdout.split('\n').map(w => w.trim());
+  console.log(execPath, processId);
+  return {
+    execPath,
+    pid: parseInt(processId),
+  }
 }
 
 function getAllAncesterProcessInfo (pid) {

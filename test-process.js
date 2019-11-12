@@ -6,5 +6,5 @@ console.log('---> this is parent process');
 // const info = execSync('node ./tested-child.js');
 // console.log(info.toString());
 const parentPid = getParentPidByPid(process.pid);
-console.log(parentPid, process.pid);
+console.log(parentPid, 'should equal to', process.pid);
 console.log('<--- parent process finished');
