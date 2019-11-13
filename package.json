@@ -5,8 +5,10 @@
   "author": "may",
   "license": "MIT",
   "scripts": {
-    "preinstall": "node check.js",
     "check": "node check.js",
-    "start": "node start.js"
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "find-process": "^1.4.2"
   }
 }

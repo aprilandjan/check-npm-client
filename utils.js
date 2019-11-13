@@ -39,6 +39,7 @@ function getParentPidByPid(pid) {
   return {
     execPath,
     pid: parseInt(processId),
+    p
   }
 }
 
