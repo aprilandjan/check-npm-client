@@ -2,15 +2,13 @@
   "name": "check-npm-client",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "may",
+  "author": "aprilandjan",
   "license": "MIT",
   "scripts": {
     "preinstall": "node check.js",
-    "check": "node check.js",
-    "start": "node index.js"
+    "check": "node check.js"
   },
   "dependencies": {
-    "find-process": "^1.4.2",
-    "jquery": "^3.4.1"
+    "find-process": "^1.4.2"
   }
 }

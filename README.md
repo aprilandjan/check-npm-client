@@ -1,5 +1,7 @@
 # check-npm-client
 
+This module helps to ensure using of [npm](https://github.com/npm/cli) or [yarn](https://github.com/yarnpkg/yarn) as npm client before try to install any dependencies to your project. It is currently working in progress.
+
 ## references
 
 - <https://github.com/nodejs/node/issues/14957>
