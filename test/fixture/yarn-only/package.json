@@ -1,7 +1,0 @@
-{
-  "name": "check-npm-client-yarn-only",
-  "version": "1.0.0",
-  "scripts": {
-    "preinstall": "../../../bin/cli --yarn-only"
-  }
-}

@@ -18,8 +18,8 @@
   "dependencies": {
     "chalk": "^3.0.0",
     "debug": "^4.1.1",
-    "find-process": "^1.4.2"
+    "find-process": "^1.4.2",
+    "npm-config-user-agent-parser": "^1.0.0"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }

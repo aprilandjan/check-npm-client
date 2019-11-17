@@ -1,0 +1,12 @@
+{
+  "name": "check-npm-client-auto",
+  "version": "1.0.0",
+  "scripts": {
+    "precheckYarn": "../../../bin/cli --yarn-only",
+    "checkYarn": "node index.js",
+    "precheckNpm": "../../../bin/cli --npm-only",
+    "checkNpm": "node index.js",
+    "precheck":  "../../../bin/cli",
+    "check": "node index.js"
+  }
+}
