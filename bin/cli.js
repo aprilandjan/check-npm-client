@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const chalk = require('chalk');
-const { debug, ensureNpm, ensureYarn } = require('../lib/utils');
+const { debug, ensureNpm, ensureYarn } = require('../lib');
 
 const helpText = `
 ${chalk.green('Usage')}
