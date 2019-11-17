@@ -1,0 +1,7 @@
+{
+  "name": "check-npm-client-auto",
+  "version": "1.0.0",
+  "scripts": {
+    "preinstall": "../../../bin/cli"
+  }
+}

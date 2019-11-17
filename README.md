@@ -9,3 +9,4 @@ This module helps to ensure using of [npm](https://github.com/npm/cli) or [yarn]
 - <https://github.com/timoxley/npm-which>
 - <https://github.com/npm/cli/issues/481>
 - <https://stackoverflow.com/questions/46725374/how-to-run-a-script-before-installing-any-npm-module>
+- <https://github.com/yarnpkg/yarn/issues/5063>

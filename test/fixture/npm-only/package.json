@@ -1,0 +1,7 @@
+{
+  "name": "check-npm-client-npm-only",
+  "version": "1.0.0",
+  "scripts": {
+    "preinstall": "../../../bin/cli --npm-only"
+  }
+}
