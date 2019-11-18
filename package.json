@@ -1,10 +1,12 @@
 {
   "name": "check-npm-client",
-  "description": "A utility to check which npm client(yarn/npm) is used",
+  "description": "check or ensure which npm client(yarn/npm) is currently used",
   "keywords": [
     "npm",
     "yarn",
     "npm scripts",
+    "npm client",
+    "ensure npm client",
     "npm user agent"
   ],
   "version": "1.0.1",
@@ -27,7 +29,10 @@
   "repository": {
 		"type": "git",
 		"url": "https://github.com/aprilandjan/check-npm-client"
-	},
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "dependencies": {
     "chalk": "^3.0.0",
     "debug": "^4.1.1",

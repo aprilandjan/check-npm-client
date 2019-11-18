@@ -1,4 +1,6 @@
-# check-npm-client
+# [check-npm-client](https://www.npmjs.com/package/check-npm-client)
+
+[![version](https://img.shields.io/npm/v/check-npm-client?style=flat-square)](https://www.npmjs.com/package/check-npm-client)
 
 `npm` and `yarn` are both npm clients used to manage node.js project dependencies. They are somehow different in some behavior, and thus can affect project running.
 
