@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const chalk = require('chalk');
-const { debug, ensureNpm, ensureYarn } = require('../lib');
+const { debug, ensureNpm, ensureYarn, getLockFileExists } = require('../lib');
 
 const helpText = `
 ${chalk.green('Usage')}
@@ -35,11 +35,23 @@ switch (script) {
     break;
   //  auto detect if yarn or npm is more suitable according to lock files
   default:
-    if (script !== undefined) {
+    if (script === undefined) {
+      debug('auto detect lock')
+      const lockFiles = getLockFileExists();
+      if (lockFiles.npm && !lockFiles.yarn) {
+        debug('only npm lock found. try ensure npm');
+        ensureNpm();
+      } else if (lockFiles.yarn && !lockFiles.npm) {
+        debug('only yarn lock found. try ensure yarn');
+        ensureYarn();
+      } else {
+        debug('cannot decide which client to use');
+      }
+    } else {
+      //  unrecognized command
       console.log(
         `${chalk.yellow('Unrecognized Command')} "${chalk.red(script)}"`
       );
+      console.log(helpText);
     }
-    console.log(process.env.npm_config_user_agent);
-    console.log(helpText);
 }
