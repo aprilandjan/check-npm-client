@@ -4,7 +4,7 @@
 
 `npm` and `yarn` are both npm clients used to manage node.js project dependencies. They are somehow different in some behavior, and thus can affect project running.
 
-This package provide ready-to-use functionality to check current npm client. When used as [pre](https://docs.npmjs.com/misc/scripts#hook-scripts) commands in npm scripts, it will check if the script is executed by specific npm client (`yarn` or `npm`). If it is restricted, then the script execution will be aborted early.
+This package provides ready-to-use functionality to check current npm client. When used as [pre](https://docs.npmjs.com/misc/scripts#hook-scripts) commands in npm scripts, it will check if the script is executed by specific npm client (`yarn` or `npm`). If it is restricted, then the script execution will be aborted early.
 
 ## Usage Scenario
 
@@ -76,6 +76,5 @@ Add the script in your `package.json` to ensure that user must use `npm` to run 
 ## References
 
 - <https://github.com/npm/cli/issues/481>
-- <https://github.com/yibn2008/find-process>
 - <https://stackoverflow.com/questions/46725374/how-to-run-a-script-before-installing-any-npm-module>
 - <https://github.com/yarnpkg/yarn/issues/5063>
