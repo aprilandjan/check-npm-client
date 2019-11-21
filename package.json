@@ -24,11 +24,12 @@
   },
   "main": "./lib/index.js",
   "scripts": {
-    "check": "node check.js"
+    "test": "node test/index.js",
+    "prepublishOnly": "test"
   },
   "repository": {
-		"type": "git",
-		"url": "https://github.com/aprilandjan/check-npm-client"
+    "type": "git",
+    "url": "https://github.com/aprilandjan/check-npm-client"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
@@ -36,7 +37,6 @@
   "dependencies": {
     "chalk": "^3.0.0",
     "debug": "^4.1.1",
-    "find-process": "^1.4.2",
     "npm-config-user-agent-parser": "^1.0.0"
   },
   "devDependencies": {}

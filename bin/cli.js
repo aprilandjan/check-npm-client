@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
 const chalk = require('chalk');
-const { debug, ensureNpm, ensureYarn, getLockFileExists } = require('../lib');
+const debug = require('debug')('check-npm-client');
+const { checkNpmClient, getLockFileExists } = require('../lib');
 
 const helpText = `
 ${chalk.green('Usage')}
@@ -20,6 +21,22 @@ const script = args[0];
 debug('cmd:', process.cwd());
 debug('script:', script);
 debug('npm user agent', process.env.npm_config_user_agent);
+
+function ensureYarn () {
+  if (!checkNpmClient('yarn')) {
+    console.error(`[check-npm-client] please use ${chalk.green('yarn')} instead of ${chalk.red('npm')}`);
+    process.exit(-1);
+  }
+  debug('the script is executed by yarn');
+}
+
+function ensureNpm () {
+  if (!checkNpmClient('npm')) {
+    console.error(`[check-npm-client] please use ${chalk.green('npm')} instead of ${chalk.red('yarn')}`);
+    process.exit(-1);
+  }
+  debug('the script is executed by npm');
+}
 
 //  check only for the first params to decide which to use
 switch (script) {
