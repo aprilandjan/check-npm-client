@@ -9,7 +9,7 @@
     "ensure npm client",
     "npm user agent"
   ],
-  "version": "1.0.1",
+  "version": "1.1.0",
   "author": "aprilandjan",
   "license": "MIT",
   "files": [
