@@ -23,6 +23,7 @@
     "check-npm-client": "./bin/cli.js"
   },
   "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "scripts": {
     "test": "mocha",
     "prepublishOnly": "npm run test"
