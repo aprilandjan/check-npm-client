@@ -8,5 +8,6 @@
     "checkNpm": "node index",
     "precheck":  "../../../bin/cli.js",
     "check": "node index"
-  }
+  },
+  "license": "MIT"
 }

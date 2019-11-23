@@ -24,8 +24,8 @@
   },
   "main": "./lib/index.js",
   "scripts": {
-    "test": "node test/index.js",
-    "prepublishOnly": "test"
+    "test": "mocha",
+    "prepublishOnly": "npm run test"
   },
   "repository": {
     "type": "git",
@@ -39,5 +39,7 @@
     "debug": "^4.1.1",
     "npm-config-user-agent-parser": "^1.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "mocha": "^6.2.2"
+  }
 }
