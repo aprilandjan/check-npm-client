@@ -53,12 +53,14 @@ Add the script in your `package.json` to ensure that user must install dependenc
 ```json
 {
   "scripts": {
-    "preinstall": "check-npm-client --yarn-only"
+    "preinstall": "npx check-npm-client --yarn-only"
   }
 }
 ```
 
-**Note**: `yarn` and `npm` treat `preinstall` script a little differently. `npm` execute it only before `npm install` (not before `npm install <module>`), but `yarn` always run it before any installation. See [issue](https://github.com/npm/cli/issues/481) here. So if specified as `--yarn-only` and user use `npm` to install another dependency, the `preinstall` will not be invoked (so the ensurance will fail).
+**Note #1**: `npx` is required to execute checking because before your project installation, the command `check-npm-client` won't be available.
+
+**Note #2**: `yarn` and `npm` treat `preinstall` script a little differently. `npm` execute it only before `npm install` (not before `npm install <module>`), but `yarn` always run it before any installation. See [issue](https://github.com/npm/cli/issues/481) here. So if specified as `--yarn-only` and user use `npm` to install another dependency, the `preinstall` will not be invoked (so the ensurance will fail).
 
 ### Ensure before any other script
 
@@ -78,3 +80,4 @@ Add the script in your `package.json` to ensure that user must use `npm` to run 
 - <https://github.com/npm/cli/issues/481>
 - <https://stackoverflow.com/questions/46725374/how-to-run-a-script-before-installing-any-npm-module>
 - <https://github.com/yarnpkg/yarn/issues/5063>
+- <https://docs.npmjs.com/cli/run-script#description>

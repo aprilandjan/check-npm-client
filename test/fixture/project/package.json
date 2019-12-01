@@ -1,5 +1,5 @@
 {
-  "name": "check-npm-client-auto",
+  "name": "check-npm-client-test",
   "version": "1.0.0",
   "scripts": {
     "precheckYarn": "../../../bin/cli.js --yarn-only",
