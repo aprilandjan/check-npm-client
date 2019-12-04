@@ -81,3 +81,5 @@ Add the script in your `package.json` to ensure that user must use `npm` to run 
 - <https://stackoverflow.com/questions/46725374/how-to-run-a-script-before-installing-any-npm-module>
 - <https://github.com/yarnpkg/yarn/issues/5063>
 - <https://docs.npmjs.com/cli/run-script#description>
+- <https://github.com/yarnpkg/yarn/issues/1732>
+- <https://github.com/AndersDJohnson/use-yarn>
